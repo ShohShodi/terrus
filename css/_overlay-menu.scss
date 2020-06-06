@@ -1,0 +1,86 @@
+.overlay-menu{
+    position: fixed;
+    top: 0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    background-color: $main-color;
+    .container{
+        height:100%;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: 1fr;
+        align-items: stretch;
+    }
+}
+.overlay-menu__item{
+    position: relative;
+    border-right: 1px solid $light-color;
+    font-size: 35px;
+    background-color: $main-color;
+    transition: all ease .3s;
+    &:hover{
+        box-shadow: 0 0 72px rgba(0,0,0,0.22);
+        border: 0;
+        transform: scale(1.2);
+        z-index:1;
+        .overlay-menu__items-heading::after{
+            width: 90%;
+        }
+        .overlay-menu__soc-icons{
+            bottom: 12%;
+        }
+        .overlay-menu__items-icon{
+            bottom:25%
+        }
+    }
+    &:last-child{
+        border:0;
+    }
+}
+.overlay-menu__items-heading{
+    position: relative;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    color: $inverse-color;
+    font-family: "PFDinTextCompProReg";
+    font-size: 30px;
+    padding-bottom: 20px;
+    &::after{
+        width:0;
+        height: 5px;
+        background-color: $inverse-color;
+        position: relative;
+        top: 50px;
+        display: block;
+        margin:0 auto;
+        content: '';
+        transition: all ease .3s;
+    }
+}
+.overlay-menu__items-icon{
+    position: absolute;
+    bottom: 12%;
+    width: 100%;
+    text-align: center;
+    color: $inverse-color;
+    transition: all ease .3s;
+}
+.overlay-menu__soc-icons{
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 10px;
+    bottom: -10%;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    transition: all ease .3s;
+}
+.overlay-menu__soc-icon{
+    display: inline-block;
+    color: $accent-color;
+}

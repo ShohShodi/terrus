@@ -1,0 +1,103 @@
+.page-header{
+  position: relative;
+  background-color: $main-color;
+}
+.page-header .logo{
+  margin-bottom: 20px;
+}
+.page-header__inner{
+  display: flex;
+  align-items: center;
+}
+.page-header__search-form{
+  position: absolute;
+  right: 0;
+  margin-right: 30px;
+  &:focus-within{
+    &:after{
+      content: "\f00d";
+    }
+    &::before{
+      display: block;
+    }
+  }
+  &:after{
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      position: absolute;
+      top:7px;
+      right: 15px;
+      display: block;
+      content: "\f002";
+      color: $dark-color;
+  }
+  &::before{
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      position: absolute;
+      top:7px;
+      left: 15px;
+      display: none;
+      content: "\f002";
+      color: $dark-color;
+  }
+}
+.page-header__search-input{
+  width: 100%;
+  padding: 7px 50px 7px 10px;
+  border-radius: 10px;
+  border:0;
+  font-family: "Montserrat";
+  transition: all ease .3s;
+  width: 200px;
+  max-width: 1200px;
+  &::placeholder{
+      color: rgba($dark-color, .5);
+  }
+  &:focus{
+      padding-left: 50px;
+      outline: none;
+      width: 87vw;
+  }
+}
+
+.page-header__menu{
+  font-family: "pfDinTextCompProReg";
+  color: $inverse-color;
+  font-size: 25px;
+  margin-left: 50px;
+}
+.page-header__menu-item{
+  display: inline-block;
+  margin: 0 10px;
+  transition: all ease .3s;
+  &:hover{
+    color: $accent-color;
+  }
+}
+
+.projects-nav{
+  background-color: $main-color;
+}
+.projects-nav__heading{
+  color: $inverse-color;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-family: 'pfDinTextCompProReg';
+}
+.projects-nav__item{
+  font-family: 'pfDinTextCompProReg';
+  color: $inverse-color;
+  font-size: 25px;
+  &::before{
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    top:-15px;
+    left: -15px;
+    content: "\f0da";
+  }
+}
+.projects-nav__h1-bottom-line{
+  height: 5px;
+}

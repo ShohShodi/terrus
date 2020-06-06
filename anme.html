@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="libs/anime.js"></script>
+</head>
+
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" width="429.069" height="95.119" viewbox="0 0 429.069 95.119">
+    <g id="Group_377" data-name="Group 377" transform="translate(6 53)">
+      <path id="Path_239" data-name="Path 239" d="M-2-11.557S-2.137,36.7-.479,38.306c17.9,8.817,54.084,14.529,64.771,12.124S101.7,34.667,119.333,34.667s52.369-.534,61.187,5.344,41.416,13.36,55.577,10.42,51.835-21.375,69.736-18.971,38.475,12.558,50.232,15.5,40.223,7.419,56.254,6.083,14.724-6.809,14.724-6.809V-11.836Z" transform="translate(-3.999 -41.164)" fill="#b71010" />
+    </g>
+  </svg>
+
+
+  <script>
+    let shapes = [{
+      d: "M-2-11.557S-3.656,48.822-2,50.431C15.9,59.248,54.116,33.865,64.8,31.46S122.71,53.04,122.71,53.04s32.509,9.741,54.859-2.61,25.4-17.783,55.875-18.971,47.117,19.175,65.018,21.58,43.684,8.725,58.922,0,35.78-15.336,51.811-16.672,17.847-11.175,17.847-11.175V-11.836Z"
+    }]
+
+    var morph = anime({
+      targets: '#Path_239',
+      d: [{
+        value: shapes[0].d
+      }],
+      duration: 5000,
+      direction: 'alternate',
+      autoplay: true,
+      easing: 'linear',
+      elasticity: 100,
+      loop: true
+    });
+  </script>
+</body>
+
+</html>

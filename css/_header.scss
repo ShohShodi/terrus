@@ -1,0 +1,204 @@
+.header{
+  position: relative;
+  background-color: $main-color;
+  height: 100vh;
+  min-height: 900px;
+  max-height: 1000px
+}
+.header__bg-text{
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  padding-right: 60px;
+  margin-top: -20px;
+  font-family: "pfDinTextCompProBold";
+  font-size: 25vw;
+  color: rgba($color: #0075C4, $alpha: 1);
+  text-shadow: 0 12px 8px rgba(0, 0, 0, 0.04);
+  letter-spacing: 6.5vw;
+  text-align: center;
+  line-height: 1;
+}
+.header__bg-text--index{
+  z-index: 1;
+  color: rgba($color: #0075C4, $alpha: 0);
+}
+.header__bg-text--zero-spacing{
+  letter-spacing: 0;
+}
+.header__bg-text--top-index{
+  text-shadow: 0 12px 8px rgba(0, 0, 0, 0.08);
+  color: rgba($color: #0075C4, $alpha: 1)
+}
+.header__top{
+  width: 100%;
+}
+.header__search-form{
+    position: relative;
+    width: 70%;
+    max-width: 800px;
+    min-width: 200px;
+    align-self: center;
+    transition: all ease-out .3s;
+    transform: scaleX(0);
+    &.is-active{
+      transform: scaleX(1);
+    }
+    &:before{
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        position: absolute;
+        top:7px;
+        left: 15px;
+        display: block;
+        content: "\f002";
+        color: $dark-color;
+    }
+}
+.header__search-input{
+    width: 100%;
+    padding: 7px 50px;
+    border-radius: 10px;
+    border:0;
+    font-family: "Montserrat";
+    &::placeholder{
+        color: rgba($dark-color, .5);
+    }
+    &:focus{
+        outline: none;
+    }
+}
+.header__top-inner{
+  display: flex;
+  justify-content: space-between;
+  *{
+    z-index:100;
+  }
+}
+.hamburger-inner, .hamburger-inner::before, 
+.hamburger-inner::after, 
+.is-active .hamburger-inner,
+.is-active .hamburger-inner::before, .is-active .hamburger-inner::after {
+  background-color: $inverse-color !important;
+}
+.slider{
+  position: relative;
+}
+.slide{
+  display: flex;
+}
+.slide__description, .slide__illustration{
+  display: inline-block;
+}
+.slide__description{
+  padding: 17vw 15px 15px 0;
+  width:50%
+}
+.slide__illustration{
+  padding-top: 3vw;
+  width: 50%;
+  svg{
+    width: 100%;
+  }
+}
+.header__slide-h1{
+  font-family: 'pfDinTextCompProReg';
+  font-size: 4vw;
+  letter-spacing: 3px;
+  color: $inverse-color;
+}
+.progress-bar{
+  display: inline-block;
+  width: 80%;
+  position: relative;
+  margin: 20px 0;
+}
+.progress-bar__bg{
+  height: 3vw;
+  border: 2px solid $inverse-color;
+  border-radius: 10px 5px 5px 10px;
+}
+.progress-bar__indicator{
+  position: absolute;
+  top:0;
+  height: 3vw;
+  background-color: $accent-color;
+  border-radius: 10px;
+}
+.header__slide-text{
+  color: $inverse-color;
+}
+.header__scroll-down{
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  width: 30px;
+  margin-left:-15px;
+}
+.slider-nav__item-bg{
+  width: 83px;
+  height: 83px;
+  border-radius: 50px;
+  border: 3px solid $light-color;
+  transition: all ease .3s;
+}
+.slider-nav{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+.slider-nav__item-illustration{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slider-nav__item-img{
+  position: absolute;
+}
+.slider-nav__items{
+  position: relative;
+  cursor: pointer;
+}
+.slider-nav__items:hover{ 
+  .slider-nav__item-bg{
+    border-color: $accent-color;
+    background-color: $accent-color;
+  }
+  
+  .slider-nav__item-heading{
+    color: $accent-color;
+    border-bottom: dashed 3px $accent-color;
+  }
+}
+.slider-nav__item-heading{
+  font-family: 'pfDinTextCompProReg';
+  color: $inverse-color;
+  font-size: 25px;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  border-bottom: dashed 3px $main-color;
+  transition: all ease .3s;
+}
+@media screen and (min-width: 1424px) {
+  .header__bg-text{
+    font-size: 392px;
+    letter-spacing: 70px;
+  }
+  .slide__description{
+    padding: 270px 15px 15px 0;
+    width:50%
+  }
+  .slide__illustration{
+    padding-top: 60px;
+  }
+  .progress-bar__bg{
+    height: 40px;
+  }
+  .progress-bar__indicator{
+    height: 40px;
+  }
+  .header__slide-h1 {
+    font-size: 68px;
+  }
+}

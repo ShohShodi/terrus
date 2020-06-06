@@ -1,0 +1,59 @@
+body{
+  font-family: 'DINPro';
+  font-size: 20px;
+}
+.container {
+  max-width: 1424px;
+  padding: 0 30px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.page-wrapper {
+  overflow: hidden;
+}
+h1{
+  color: $main-color;
+  font-family: "pfDinTextCompProThin";
+  font-weight: lighter;
+  letter-spacing: 2px;
+  font-size: 80px;
+  margin-top: 50px;
+}
+h2{
+  color: $main-color;
+  font-family: "DINProMedium";
+  font-weight: lighter;
+  font-size: 35px;
+  margin-top: 30px;
+}
+.accented{
+  color: $accent-color;
+}
+.inversed{
+  color: $inverse-color;
+}
+.h1__bottom-line{
+  display: inline-block;
+  width: 120px;
+  height: 10px;
+  background-color: $main-color;
+}
+.h1__bottom-line--inverse{
+  background-color: $inverse-color;
+}
+.h1__bottom-line--accented{
+  background-color: $accent-color;
+}
+.h1__bottom-line--inversed{
+  background-color: $inverse-color;
+}
+.h2__bottom-line{
+  display: inline-block;
+  width: 120px;
+  height: 5px;
+  background-color: $main-color;
+}
+.h2__bottom-line--accented{
+  background-color: $accent-color;
+}
