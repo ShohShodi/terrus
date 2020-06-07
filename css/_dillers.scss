@@ -1,9 +1,13 @@
 .dillers{
     position: relative;
     width: 100%;
-    height: 56.25vw;
-    max-height: 90vh;
+    height: 80vw;
     overflow: hidden;
+    max-height: 1500px;
+}
+.dillers__slider{
+  display: flex;
+  justify-content: center;
 }
 .dillers__background-content{
     position: absolute;
@@ -18,19 +22,18 @@
     opacity: .75;
 }
 .dillers__background-content video{
-    width: 100vw;
+    min-width: 100vw;
+    min-height: 100%;
     margin: 0 auto;
 }
 .dillers-slider{
-  width:50%;
+  width:50vw;
+  max-width: 1000px;
   position:absolute;
-  left:25%;
-  max-height: 65vh;
+  max-height: 50vw;
 
 }
-#dillers-slider{
-}
-#dillers-slider_first-way{
+.dillers-slider__way{
   transition: all ease 1s;
 }
 .str2 {
@@ -38,7 +41,7 @@
   stroke-width: 141.11;
   stroke-miterlimit: 22.9256
 }
-svg#dillers-slider g g{
+svg.dillers-slider g g{
     opacity: .5;
     transition: all ease-out .3s;
     &.active{
@@ -79,4 +82,85 @@ svg#dillers-slider g g{
   stroke:#C2D130;
   stroke-width:105.83;
   stroke-miterlimit:22.9256
+}
+.dillers__slider-nav{
+  position: absolute;
+  width: 100%;
+  bottom: 100px;
+  display: grid;
+  grid-template-columns: 1fr 40px 220px 40px 220px 40px 1fr;  
+  grid-template-rows: 40px;
+}
+.dillers__slider-paths
+{
+  display: flex;
+  align-items: center;
+  &>div{
+    width: 100%;
+    height: 3px;
+    background-color: $inverse-color;
+  }
+}
+.dillers__slider-circle
+{
+  display: flex;
+  align-items: center;
+  &>div{
+    width: 100%;
+    height: 100%;
+    border: 3px solid $inverse-color;
+    border-radius: 120%;
+  }
+}
+.dillers__slider-circle.is-active div{
+  border-color: $accent-color;
+  transition: all ease .3s;
+}
+
+.dillers__slider-circle.active div{
+  border-width: 0;
+  transition: all ease .3s;
+}
+.dillers__slider-paths.is-active div{
+  background-color: $accent-color;
+  transition: all ease .3s;
+}
+.dillers__slider-titles{
+  position: absolute;
+  width: 100%;
+  bottom: 30px;
+  display: grid;
+  grid-template-columns: 1fr 260px 260px 260px 1fr;  
+  grid-template-rows: 40px;
+}
+.dillers__slider-title{
+  text-align: center;
+  color: $inverse-color;
+  font-family: "pFDinTextCompProReg";
+  font-size: 30px;
+  text-transform: uppercase;
+  transition: all ease .3s;
+  cursor: pointer;
+}
+.dillers__slider-title.is-active, 
+.dillers__slider-title:hover{
+  color: $accent-color;
+}
+.dillers__slider-man{
+  position: absolute;
+  bottom: 110px;
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  transition: all ease .3s;
+  color: $accent-color;
+}
+.dillers__slider-man span{
+  margin-left: -520px;
+  transition: all ease .5s;
+}
+.dillers-slider__text{
+  fill: $inverse-color;
+  font-size: 750px;
+  font-family: "pfDinTextCompProReg";
 }

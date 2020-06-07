@@ -11,6 +11,7 @@
 }
 .documentation__text{
     width: 50%;
+    padding-right: 30px;
     margin: 30px 0;
     font-size: 20px;
     color: $inverse-color
@@ -39,7 +40,7 @@
 }
 .documentation__slider-content{
     position: absolute;
-    width: 690px;
+    width: 50%;
     height: 690px;
     right: 0;
     top: -190px;
