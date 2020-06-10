@@ -1,6 +1,6 @@
 .footer{
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     min-height: 100px
 }
 .footer__inner{
@@ -96,8 +96,23 @@
     text-decoration: underline;
     font-weight: normal;
 }
+.footer__waves-container{
+    left:50%;
+    position: absolute;
+    top:-2.25vw;
+    width: 50vw;
+    height: 500px;
+    transform: skewX(-10deg);
+    margin-left: 20vw;
+}
+
+#footer__wave {fill:none;fill-rule:nonzero;stroke:$main-color;stroke-width:60px;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4}
+
 @media screen and (min-width: 1424px) {
     .footer__bg{
+        margin-left: 250px;
+    }
+    .footer__waves-container{
         margin-left: 250px;
     }
 }
