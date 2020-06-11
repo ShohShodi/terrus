@@ -903,7 +903,12 @@ h2 {
 }
 
 .projects-nav {
-  background-color: #0971B7;
+  position: absolute;
+  display: none;
+  top: 185px;
+  width: 100%;
+  background-color: #00A0E3;
+  max-height: calc(100vh - 185px);
 }
 
 .projects-nav__heading {
@@ -911,25 +916,89 @@ h2 {
   font-size: 30px;
   text-transform: uppercase;
   font-family: 'pfDinTextCompProReg';
+  margin-top: 0px;
 }
 
-.projects-nav__item {
+.projects-nav__subitem {
   font-family: 'pfDinTextCompProReg';
   color: #fff;
   font-size: 25px;
+  position: relative;
+  margin-left: 15px;
 }
 
-.projects-nav__item::before {
+.projects-nav__subitem::before {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
   position: absolute;
-  top: -15px;
   left: -15px;
   content: "\f0da";
+  color: #C2D130;
 }
 
 .projects-nav__h1-bottom-line {
   height: 5px;
+}
+
+.projects-nav__poligon {
+  position: absolute;
+  top: -70px;
+  left: 300px;
+  width: 200px;
+}
+
+.projects-nav__poligon polygon {
+  fill: #00A0E3;
+  fill-rule: nonzero;
+}
+
+.projects-nav__item {
+  width: 33.3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 25px;
+}
+
+.projects-nav__nav__subitem {
+  width: 100%;
+}
+
+.projects-nav__item-img {
+  margin-right: 15px;
+  margin-top: -10px;
+  height: 55px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 90px;
+}
+
+.projects-nav__item-img img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.projects-nav__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  max-height: calc(100vh - 185px);
+  padding: 30px 0;
 }
 
 .overlay-menu {
